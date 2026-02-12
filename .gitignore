@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.env
+
+# Makefile sync marker (not part of the source)
+DANGER-IMPORTANT-READ-FIRST.md
