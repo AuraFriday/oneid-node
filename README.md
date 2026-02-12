@@ -42,12 +42,14 @@ console.log(`I am ${me.handle} (tier: ${me.trust_tier})`);
 
 ## Trust Tiers
 
-| Tier | Hardware | Sybil Resistance |
-|------|----------|-----------------|
-| `sovereign` | TPM (discrete/firmware) | Highest — manufacturer-attested |
-| `sovereign-portable` | YubiKey / Nitrokey | High — manufacturer-attested |
-| `virtual` | VMware/Hyper-V vTPM | Medium — hypervisor-attested |
-| `declared` | None (software keys) | Lowest — self-asserted |
+| Tier | Hardware | Sybil Resistant | Trust Level |
+|------|----------|-----------------|-------------|
+| `sovereign` | TPM (Intel, AMD, Infineon) with valid cert | Yes | Highest |
+| `sovereign-portable` | YubiKey / Nitrokey / Feitian with attestation | Yes | Highest |
+| `legacy` | Hardware TPM or security key with expired cert | Yes | High |
+| `virtual` | VMware / Hyper-V / QEMU vTPM | No | Verified Hardware |
+| `enclave` | Apple Secure Enclave (TOFU) | No | Verified Hardware |
+| `declared` | None (software keys) | No | Software |
 
 **CRITICAL**: `request_tier` is a REQUIREMENT, not a preference. You get exactly what you ask for, or an exception. No silent fallbacks.
 
