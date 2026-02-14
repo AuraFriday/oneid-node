@@ -1,6 +1,6 @@
 {
   "name": "1id",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Hardware-anchored identity SDK for AI agents -- 1id.com",
   "keywords": [
     "identity",
@@ -44,7 +44,7 @@
     "node": ">=18.0.0"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "npx tsc",
     "clean": "node -e \"const fs=require('fs'); fs.rmSync('dist',{recursive:true,force:true})\"",
     "prepublishOnly": "npm run clean && npm run build",
     "test": "node --test dist/test/test_declared_enrollment.js",

@@ -58,9 +58,9 @@ export enum HSMType {
  * Returned by enroll() and whoami(). All fields are readonly.
  */
 export interface Identity {
-  /** Permanent unique identifier (e.g., '1id_a7b3c9d2'). Never changes. */
+  /** Permanent unique identifier (e.g., '1id-a7b3c9d2'). Never changes. */
   readonly internal_id: string;
-  /** Display name (e.g., '@clawdia' or '@1id_a7b3c9d2'). */
+  /** Display name (e.g., '@clawdia' or '@1id-a7b3c9d2'). */
   readonly handle: string;
   /** The trust level assigned based on hardware attestation. */
   readonly trust_tier: TrustTier;

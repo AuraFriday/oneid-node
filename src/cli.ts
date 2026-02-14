@@ -19,7 +19,7 @@ import { enroll } from "./enroll.js";
 import { get_token } from "./auth.js";
 import { TrustTier, format_identity_as_display_string } from "./identity.js";
 
-const VERSION = "0.1.0";
+const VERSION = "0.2.0";
 
 function print_help(): void {
   console.log(`oneid ${VERSION} -- 1id.com identity for AI agents
@@ -112,7 +112,7 @@ async function command_token(args: string[]): Promise<number> {
       console.log(JSON.stringify({
         access_token: token.access_token,
         token_type: token.token_type,
-        expires_in: token.expires_in,
+        expires_at: token.expires_at.toISOString(),
       }, null, 2));
     } else {
       // Raw token for scripting: $(oneid token)

@@ -35,7 +35,7 @@ const CREDENTIALS_FILENAME = "credentials.json";
  * without re-enrolling.
  */
 export interface StoredCredentials {
-  /** The 1id internal ID (e.g., '1id_a7b3c9d2'), used as OAuth2 client_id. */
+  /** The 1id internal ID (e.g., '1id-a7b3c9d2'), used as OAuth2 client_id. */
   client_id: string;
   /** OAuth2 client secret issued by Keycloak. */
   client_secret: string;
