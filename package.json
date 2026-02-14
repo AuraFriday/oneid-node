@@ -32,6 +32,9 @@
       "types": "./dist/index.d.ts"
     }
   },
+  "bin": {
+    "oneid": "./dist/cli.js"
+  },
   "files": [
     "dist",
     "LICENSE",
